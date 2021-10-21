@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Ejercico 1</h3>
+    <script>
+        let numeros=[];
+        let num;
+        let i=0;
+        do{
+            num = prompt("Introduce los numeros que deseas o x para salir");
+            try {
+            if(num === "") throw "Introduce un numero por favor";
+            if(isNaN(num)&&num!="x"&&num!="X") throw "No es un numero";
+            if(num==="x" || num==="X") break;
+            num=Number(num);            
+            numeros[i]=num;
+            i=i+1;            
+            }
+            catch(err) {
+                alert(`${num} no es un numero`);
+            }            
+        }while(num!="x"||"X");
+        alert("El array es "+numeros);              
+    </script>    
+</body>
+</html>

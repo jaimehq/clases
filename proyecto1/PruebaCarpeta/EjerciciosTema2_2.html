@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Ejercico 2</h3>
+    <script>
+        let numeros=[];
+        let num;
+        let i=0;
+        let cantidad=10
+        let mayor=0;
+        let menor=50000000;        
+        do{
+            num = prompt(`Introduce un numero. Te faltan ${cantidad} numeros`);
+            try {
+            if(num === "") throw "Introduce un numero por favor";
+            if(isNaN(num)) throw "No es un numero";            
+            num=Number(num);            
+            numeros[i]=num;
+            i=i+1; 
+            cantidad=cantidad-1;           
+            }
+            catch(err) {
+                alert(err);
+            }            
+        }while(cantidad>0);
+        alert("El array es "+numeros);        
+        /*for(i=0; i<9; i++){
+            if (numeros[i]>numeros[i+1])
+                mayor=numeros[i];
+            else if (numeros[9]>mayor)
+                mayor=numeros[9];
+            if (numeros[i]<numeros[i+1])
+                menor=numeros[i];
+            else if (numeros[9]<menor)
+                menor=numeros[9];
+        }*/
+        //Math.max(...numeros);
+        alert(`El mayor es ${Math.max(...numeros)} y el menor es ${Math.min(...numeros)}`); 
+        console.log(`El mayor es ${mayor} y el menor es ${menor}`);          
+    </script>    
+</body>
+</html>
