@@ -39,7 +39,7 @@ realizará con alguno de los métodos de Array que utilizan un callback.
             if (apuestaResultado == 1) {
                 do{
                     num=(Math.floor((Math.random()) * 49))+1;
-                    if(ComprobarExistencia(combinacion,num))
+                    if(!ComprobarExistencia(combinacion,num))
                         combinacion.push(num);
                 }while(combinacion.length<7);                
             }
