@@ -50,17 +50,30 @@ agregar.onclick=function(){
     let street=document.getElementById("calle").value;
     let poblacion=document.getElementById("pobl").value;
     let provincia=document.getElementById("prov").value;
-    telefono.movil=document.getElementById("movil").value;
-    telefono.casa=document.getElementById("casa").value;
-    telefono.trabajo=document.getElementById("trabajo").value;
-    //debugger
-    //let persona=()
-    //dir=Direccion(street,poblacion,provincia);
-    persona= new Persona(name,new Direccion(street,poblacion,provincia),telefono);
-    //debugger
-    agenda.agregarPersona(persona);
+    telefono.movil=validarTel(document.getElementById("movil").value);
+    telefono.casa=validarTel(document.getElementById("casa").value);
+    telefono.trabajo=validarTel(document.getElementById("trabajo").value);
+    if(telefono.movil!="El telefono no es valido" && telefono.casa!="El telefono no es valido" && telefono.trabajo!="El telefono no es valido"){
+        persona= new Persona(name,new Direccion(street,poblacion,provincia),telefono);
+        //debugger
+        agenda.agregarPersona(persona);
+    }else{
+        document.getElementById("movil").value=telefono.movil
+        document.getElementById("casa").value=telefono.casa
+        document.getElementById("trabajo").value=telefono.trabajo
+    }
+    debugger
 }
-function validar(){
+function validarTel(tel){
+    rEMovil=/\b[679]\d{8}\b/;
+    switch(true){
+        case tel=="":
+            break
+        case !rEMovil.test(tel):
+            tel="El telefono no es valido";
+            break;  
+    }
+    return tel;
     
 }
 
