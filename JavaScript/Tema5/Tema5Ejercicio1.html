@@ -7,12 +7,17 @@
     <title>Ejercicio 1 de Objetos</title>
     <style>
         td{
+<<<<<<< HEAD
             border: solid;
             border: black;
+=======
+            padding: 1%;
+>>>>>>> d164f6ed0545cc70b1ca915d7c653c73e969b2a6
         }
     </style>
 </head>
 <body>
+<<<<<<< HEAD
     <table style="width: 100%; ">
         <tr style="height: 20%; border: 1px;">
             <td style="width:30%; border: 1px">
@@ -32,6 +37,27 @@
                 <button id="crearCliente" onclick="crearCliente()">Crear</button>
             </td>
             <td style="width:30%; border: 1px;">
+=======
+    <table style="width: 100%; padding: 1%; ">
+        <tr style="height: 20%; border: solid; padding: 1%">
+            <td style="width:30%; border: solid">
+                <h1>Empresa</h1>
+                <p>Nombre: <input style="margin-left: 10px;" type="text" id="nomEmp" value="Galileo"></p>
+                <p>Direccion: <input type="text" id="dirEmp" value="Crt/ Villabañez"></textarea></p>
+                <p>Telefono: <input style="margin-left: 8px;" type="text" id="telEmp" value="983******"></textarea></p>
+                <p>CIF <input style="margin-left: 43px;" type="text" id="cifEmp" value="47000000B"></textarea></p>
+                <button id="crearEmpresa" onclick="crearEmp()">Crear</button>
+            </td>
+            <td style="width:30%; border: solid">
+                <h1>Cliente</h1>
+                <p>Nombre: <input style="margin-left: 10px;" type="text" id="nomCli" value="Jaime"></textarea></p>
+                <p>Direccion: <input type="text" id="dirCli" value="C/ Onde vivo"></textarea></p>
+                <p>Telefono: <input style="margin-left: 8px;" type="text" id="telCli" value="666666666"></textarea></p>
+                <p>NIF <input style="margin-left: 43px;" type="text" id="nifCli" value="11111111N"></textarea></p>
+                <button id="crearCliente" onclick="crearCliente()">Crear</button>
+            </td>
+            <td style="width:30%; border: solid;">
+>>>>>>> d164f6ed0545cc70b1ca915d7c653c73e969b2a6
                 <h1>Productos:</h1>
                 <p>Descipcion: <input style="margin-left: 10px;" type="text" id="dProducto"></textarea></p>
                 <p>Precio: <input type="text" style="margin-left:40px" id="pProducto"></textarea></p>
@@ -45,14 +71,26 @@
                 <button id="crearFactura" onclick="crearFactura()">Crear Factura</button>
             </td>
         </tr>
+<<<<<<< HEAD
         <tr>
             <td>
+=======
+        </table>
+        <fieldset style="width: 800px;">
+        <table>
+        <tr>
+            <td style="width: 400px; border: solid;">
+>>>>>>> d164f6ed0545cc70b1ca915d7c653c73e969b2a6
                 <p style="font-size: larger;">Empresa: <label id="nombreEmpresa"></label></p>
                 <p>Direccion: <label id="direccionEmpresa"></label></p>
                 <p>Telefono: <label id="telefonoEmpresa"></label></p>
                 <p>CIF: <label id="cifEmpresa"></label></p>
             </td>
+<<<<<<< HEAD
             <td>
+=======
+            <td style="width: 400px; border: solid;">
+>>>>>>> d164f6ed0545cc70b1ca915d7c653c73e969b2a6
                 <p style="font-size: larger;">Cliente: <label id="nombreCliente"></label></p>
                 <p>Direccion: <label id="direccionCliente"></label></p>
                 <p>Telefono: <label id="telefonoCliente"></label></p>
@@ -60,7 +98,11 @@
             </td>
         </tr>
         <tr>
+<<<<<<< HEAD
             <td>
+=======
+            <td colspan="2" style="width: auto;">
+>>>>>>> d164f6ed0545cc70b1ca915d7c653c73e969b2a6
                 <p>Productos:</p>
                 <p id="productosFactura"></p>
                 <p>Base Imponible: <label id="baseFactura"></label></p>
@@ -69,6 +111,10 @@
             </td>
         </tr>
     </table>
+<<<<<<< HEAD
+=======
+</fieldset>
+>>>>>>> d164f6ed0545cc70b1ca915d7c653c73e969b2a6
     <script>
         function Empresa(nom,dir,tel,cif){
             this.nombre=nom;
@@ -104,7 +150,14 @@
                 this.total+=this.productos[i].total;
             }
             this.base=this.total*(100-this.iva)/100;
+<<<<<<< HEAD
             this.impuestos=this.total-this.base;
+=======
+            this.base=Number(this.base.toFixed(2));
+            this.impuestos=this.total-this.base;
+            this.impuestos=Number(this.impuestos.toFixed(2));
+            
+>>>>>>> d164f6ed0545cc70b1ca915d7c653c73e969b2a6
         }
         
         function crearEmp(){
@@ -136,7 +189,11 @@
             imprimirCliente();
             imprimirEmpresa();
             imprimirDetalles();
+<<<<<<< HEAD
             debugger
+=======
+            //debugger
+>>>>>>> d164f6ed0545cc70b1ca915d7c653c73e969b2a6
         }  
         let fac;   
         let empresa;
@@ -155,12 +212,26 @@
             document.getElementById("nifCliente").textContent=cliente.nif;
         }
         function imprimirDetalles(){
+<<<<<<< HEAD
             for(let i=0; i<fac.productos.length;i++){
                 document.getElementById("productosFactura").textContent+=`${fac.productos[i].descripcion} cantidad: ${fac.productos[i].cantidad} precio: ${fac.productos[i].precio}€ total: ${fac.productos[i].total}€`;
             }
             document.getElementById("baseFactura").textContent= `${fac.base}€`;
             document.getElementById("ivaFactura").textContent= `${fac.impuestos}€`;
             document.getElementById("totalFactura").textContent= `${fac.total}€`;
+=======
+            let prodHtml=document.getElementById("productosFactura");
+            let cadena;
+            cadena="<table><th>Nombre</th><th>Cantidad</th><th>Precio Unitario</th><th>TOTAL</th>";
+            for(let i=0; i<fac.productos.length;i++){
+                cadena+=`<tr><td> ${fac.productos[i].descripcion}</td><td>  ${fac.productos[i].cantidad}und</td><td> ${fac.productos[i].precio}€/und</td><td>${fac.productos[i].total}€</td></tr>`;
+            }
+            cadena+="</table>";
+            prodHtml.innerHTML=cadena;
+            document.getElementById("baseFactura").textContent= `_________ ${fac.base}€`;
+            document.getElementById("ivaFactura").textContent= `__________________  ${fac.impuestos}€`;
+            document.getElementById("totalFactura").textContent= `_______________   ${fac.total}€`;
+>>>>>>> d164f6ed0545cc70b1ca915d7c653c73e969b2a6
 
         }
         //empresa=crearEmp();
