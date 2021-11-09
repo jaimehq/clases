@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+}
+.caracteristicas{
+  margin-top: -50%;
+}
+.contenedor1{
+    padding-top: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 100%;
+    /* background-image: url("img/paisaje.jpg"); */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 80vmax;
+    flex-direction: row;
+    justify-content: center;    
+    animation-name: espera,cambio;
+    animation-duration: 2s, 3s;
+    animation-delay: 0s, 1.7s;
+    
+}
+@keyframes espera{
+    from {
+        
+        background-image: url("img/brillante.jfif"); 
+        
+      }
+    
+      to {      
+       
+        background-image: url("img/brillante.jfif");
+      }
+    }
+@keyframes cambio {
+  from {
+    margin-bottom: 100%; 
+    background-image: url("img/brillante.jfif"); 
+    animation-delay: 2s;  
+  }
+
+  to {
+    margin-top: 0%;
+   
+    background-image: url("img/paisaje.jpg");
+  }
+}
+
+/* .contenedor1:hover{
+    
+    background-image: url("img/paisaje.jpg");
+} */
+/* @keyframes animacion {
+  100%{
+    opacity: 50%;
+    transform: scale(0.7);
+    
+  }
+} */
+.item1:hover{
+  background-image: url("https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-blue-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652954000");
+  background-size: 130%;
+}
+.item2:hover{
+  background-image: url("https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-silver-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652954000");
+  background-size: 130%;
+}
+.item3:hover{
+  background-image: url("https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-gold-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652954000");
+  background-size: 130%;
+}
+.item4:hover{
+  background-image: url("https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-graphite-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652957000");
+  background-size: 130%;
+}
+.item1{
+    background-size: 50%;
+    height: 50%;
+    background-position: 50% 2%;
+    background-repeat: no-repeat;
+    background-image: url("https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-finish-blue-2021?wid=204&amp;amp;hei=204&amp;amp;fmt=jpeg&amp;amp;qlt=80&amp;amp;.v=1629940690000");
+    flex: 20%;
+    text-align: center;
+    animation-name: esperaColor,cambioColor;
+    animation-duration: 5s, 4s;
+    animation-delay: 0s, 4.7s;    
+}
+.item0{
+  flex:90%;
+  background-size: 50%;
+  height:10%;
+  font-size: 17px;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;    
+    color: #1d1d1f;
+    font-style: normal;
+  text-align: center;
+    animation-name: esperaColor,cambioColor;
+    animation-duration: 5s, 4s;
+    animation-delay: 0s, 4.7s; 
+}
+.itemCaracteristicas{
+  flex:90%;
+  background-size: 50%;
+  height:20%;
+  font-size: 17px;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;    
+    color: #1d1d1f;
+    font-style: normal;
+  text-align: center;
+    animation-name: esperaColor,cambioColor;
+    animation-duration: 5s, 4s;
+    animation-delay: 0s, 4.7s; 
+}
+.item5{
+  flex:40%;
+  background-size: 50%;
+  height: 50%;
+  background-position: 50% 2%;
+  background-repeat: no-repeat;
+  background-image: url("https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-finish-blue-2021?wid=204&amp;amp;hei=204&amp;amp;fmt=jpeg&amp;amp;qlt=80&amp;amp;.v=1629940690000");
+  text-align: center;
+    animation-name: esperaColor,cambioColor;
+    animation-duration: 5s, 4s;
+    animation-delay: 0s, 4.7s; 
+}
+.item6{
+  flex:40%;
+  background-size: 50%;
+  height: 50%;
+  background-position: 50% 2%;
+  background-repeat: no-repeat;
+  background-image: url("https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-finish-blue-2021?wid=204&amp;amp;hei=204&amp;amp;fmt=jpeg&amp;amp;qlt=80&amp;amp;.v=1629940690000");
+  text-align: center;
+    animation-name: esperaColor,cambioColor;
+    animation-duration: 5s, 4s;
+    animation-delay: 0s, 4.7s; 
+}
+@keyframes esperaColor{
+  0% {
+    opacity: 0%;
+    }
+    100% {
+      opacity: 0%;
+      }
+    
+  }@keyframes cambioColor{
+    0% {
+      opacity: 0%;
+      }
+      100%{
+        opacity: 100%;
+      }
+    }
+.item2{
+  background-size: 50%;
+    flex:20%;
+    text-align: center;
+    height: 50%;
+    background-position: 50% 2%;
+    background-repeat: no-repeat;
+    background-image: url("https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-finish-silver-2021?wid=204&amp;amp;hei=204&amp;amp;fmt=jpeg&amp;amp;qlt=80&amp;amp;.v=1629940690000");
+    animation-name: esperaColor,cambioColor;
+    animation-duration: 5s, 4s;
+    animation-delay: 0s, 4.7s;
+}
+.item3{
+  background-size: 50%;
+    flex:20%;
+    text-align: center;
+    height: 50%;
+    background-position: 50% 2%;
+    background-repeat: no-repeat;
+    background-image: url("https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-finish-gold-2021?wid=204&amp;amp;hei=204&amp;amp;fmt=jpeg&amp;amp;qlt=80&amp;amp;.v=1629940690000");
+    animation-name: esperaColor,cambioColor;
+    animation-duration: 5s, 4s;
+    animation-delay: 0s, 4.7s;
+}
+.item4{
+  background-size: 50%;
+  flex:20%;
+  text-align: center;
+  height: 50%;
+    background-position: 50% 2%;
+    background-repeat: no-repeat;
+    background-image: url("https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-finish-graphite-2021?wid=204&amp;amp;hei=204&amp;amp;fmt=jpeg&amp;amp;qlt=80&amp;amp;.v=1629940690000");
+  animation-name: esperaColor,cambioColor;
+  animation-duration: 5s, 4s;
+  animation-delay: 0s, 4.7s;
+}
+body{
+    margin: 0%;
+    height: 100%;
+    width: 100%;
+}
+.cuerpo{
+    flex: 50%;
+}
+
+h3{
+    color: white;
+}
+.fondo{
+    width: 100%;
+    background-image: url("img/paisaje.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    margin:0;
+}
+tr,td{
+    border: 1px, solid, black;
+    width: 30%;
+    height: 1000px;
+}
